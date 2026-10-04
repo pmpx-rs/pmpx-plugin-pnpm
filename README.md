@@ -56,6 +56,11 @@ With arguments it is `pnpm add`.
 $ pmpx plugin add pnpm
 ```
 
+Every release also publishes prebuilt assets for the common targets -- Linux x64, Windows
+x64 and both macOS architectures. `crate-plugin-kit` downloads them from the release of the
+same tag, so an install usually takes a second instead of a build; a target without assets
+falls back to compiling from source, which is slower, not broken.
+
 ## Detection
 
 From `pmpx-plugin.toml`, which travels with this crate:
